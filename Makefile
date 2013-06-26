@@ -27,6 +27,15 @@ $(DEPFILE): Makefile
 $(SOFILE): $(OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) -shared $(OBJS) $(LDADD) -o $@
 
+install-includes:
+	@mkdir -p $(DESTDIR)/usr/include/libdbus2vdr
+	@cp *.h $(DESTDIR)/usr/include/libdbus2vdr
+
+install-lib: $(SOFILE)
+	install -D $^ $(DESTDIR)/usr/lib/$^
+
+install: install-includes install-lib
+
 clean:
 	@-rm -f $(OBJS) $(DEPFILE) *.so *.tgz core* *~
 
