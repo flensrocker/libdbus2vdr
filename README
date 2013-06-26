@@ -1,0 +1,26 @@
+This is a library for communicating with the vdr-plugin dbus2vdr
+
+Written by:                  Lars Hanisch <dvb@flensrocker.de>
+
+Project's homepage:          https://github.com/flensrocker/libdbus2vdr
+
+Latest version available at: git://github.com/flensrocker/libdbus2vdr.git
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+See the file COPYING for more information.
+
+Description:
+To simplify the usage of the vdr-plugin dbus2vdr this library offers
+a wrapper interface around the DBus-API of dbus2vdr.
+It uses GDBus, the DBus implementation of GLib/GIO.
+It is fully asynchronous.
+And you need a GMainLoop.
+
+Just have a look at the examples directory, I will try to keep it
+up to date.
+
+Have fun!
+  Lars.
