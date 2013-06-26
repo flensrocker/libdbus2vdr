@@ -1,4 +1,6 @@
 
+VERSION = 0.0.1a
+
 SOFILE = libdbus2vdr.so
 
 CC ?= gcc
@@ -38,4 +40,7 @@ install: install-includes install-lib
 
 clean:
 	@-rm -f $(OBJS) $(DEPFILE) *.so *.tgz core* *~
+
+orig:
+	if [ -d .git ]; then git archive --format=tar.gz --prefix=libdbus2vdr-$(VERSION)/ -o ../libdbus2vdr_$(VERSION).orig.tar.gz master; fi
 
