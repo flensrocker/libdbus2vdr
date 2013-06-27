@@ -1,3 +1,10 @@
+libdbus2vdr (0.0.2-0yavdr1) precise; urgency=medium
+
+  * rebuild with python-setuptools as dependency
+    Launchpad seems to have a problem
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 27 Jun 2013 13:56:00 +0200
+
 libdbus2vdr (0.0.2-0yavdr0) precise; urgency=medium
 
   * new upstream release

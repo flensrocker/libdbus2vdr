@@ -2,7 +2,7 @@ Source: libdbus2vdr
 Section: libs
 Priority: extra
 Maintainer: Lars Hanisch <dvb@flensrocker.de>
-Build-Depends: debhelper (>= 8), libglib2.0-dev, pkg-config
+Build-Depends: debhelper (>= 8), libglib2.0-dev, pkg-config, python-setuptools
 Standards-Version: 3.9.1
 Homepage: https://github.com/flensrocker/libdbus2vdr
 
