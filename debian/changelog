@@ -1,3 +1,9 @@
+libdbus2vdr (0.0.2a-0yavdr0) precise; urgency=medium
+
+  * add dev package and install examples
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 27 Jun 2013 15:31:00 +0200
+
 libdbus2vdr (0.0.2-0yavdr1) precise; urgency=medium
 
   * rebuild with python-setuptools as dependency

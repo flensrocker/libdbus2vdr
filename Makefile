@@ -1,5 +1,5 @@
 
-VERSION = 0.0.2
+VERSION = 0.0.2a
 
 SOFILE = libdbus2vdr.so
 
