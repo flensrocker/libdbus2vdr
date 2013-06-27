@@ -1,3 +1,9 @@
+libdbus2vdr (0.0.2-0yavdr0) precise; urgency=medium
+
+  * new upstream release
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Thu, 27 Jun 2013 12:33:50 +0200
+
 libdbus2vdr (0.0.1-0yavdr0) precise; urgency=medium
 
   * initial release
