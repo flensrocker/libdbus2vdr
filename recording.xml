@@ -1,0 +1,63 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.recording">
+    <method name="Update">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="Get">
+      <arg type="v" name="number_or_path" direction="in">
+      </arg>
+      <arg type="(ia(sv))" name="recording" direction="out">
+      </arg>
+    </method>
+    <method name="List">
+      <arg type="a(ia(sv))" name="recordings" direction="out">
+      </arg>
+    </method>
+    <method name="Play">
+      <arg type="v" name="number_or_path" direction="in">
+      </arg>
+      <arg type="v" name="begin" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="AddExtraVideoDirectory">
+      <arg type="s" name="option" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="ClearExtraVideoDirectories">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="DeleteExtraVideoDirectory">
+      <arg type="s" name="option" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="ListExtraVideoDirectories">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+      <arg type="as" name="extravideodirs" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>

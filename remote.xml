@@ -1,0 +1,89 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.remote">
+    <method name="CallPlugin">
+      <arg type="s" name="pluginName" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="Enable">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="Disable">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="Status">
+      <arg type="b" name="status" direction="out">
+      </arg>
+    </method>
+    <method name="HitKey">
+      <arg type="s" name="keyName" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="HitKeys">
+      <arg type="as" name="keyNames" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="AskUser">
+      <arg type="s" name="title" direction="in">
+      </arg>
+      <arg type="as" name="items" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="SwitchChannel">
+      <arg type="s" name="option" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="GetVolume">
+      <arg type="i" name="volume" direction="out">
+      </arg>
+      <arg type="b" name="mute" direction="out">
+      </arg>
+    </method>
+    <method name="SetVolume">
+      <arg type="v" name="option" direction="in">
+      </arg>
+      <arg type="i" name="volume" direction="out">
+      </arg>
+      <arg type="b" name="mute" direction="out">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <signal name="AskUserSelect">
+      <arg type="s" name="title">
+      </arg>
+      <arg type="i" name="index">
+      </arg>
+    </signal>
+  </interface>
+</node>

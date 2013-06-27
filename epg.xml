@@ -1,0 +1,79 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.epg">
+    <method name="DisableScanner">
+      <arg type="i" name="eitdisabletime" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="EnableScanner">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="ClearEPG">
+      <arg type="s" name="channel" direction="in">
+      </arg>
+      <arg type="i" name="eitdisabletime" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="PutEntry">
+      <arg type="as" name="entryline" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="PutFile">
+      <arg type="s" name="filename" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="Now">
+      <arg type="s" name="channel" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+      <arg type="aa(sv)" name="event_list" direction="out">
+      </arg>
+    </method>
+    <method name="Next">
+      <arg type="s" name="channel" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+      <arg type="aa(sv)" name="event_list" direction="out">
+      </arg>
+    </method>
+    <method name="At">
+      <arg type="s" name="channel" direction="in">
+      </arg>
+      <arg type="t" name="time" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+      <arg type="aa(sv)" name="event_list" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>

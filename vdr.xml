@@ -1,0 +1,23 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.vdr">
+    <method name="Status">
+      <arg type="s" name="status" direction="out">
+      </arg>
+    </method>
+    <signal name="Start">
+      <arg type="i" name="instanceid">
+      </arg>
+    </signal>
+    <signal name="Ready">
+      <arg type="i" name="instanceid">
+      </arg>
+    </signal>
+    <signal name="Stop">
+      <arg type="i" name="instanceid">
+      </arg>
+    </signal>
+  </interface>
+</node>

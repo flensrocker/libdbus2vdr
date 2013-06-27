@@ -1,0 +1,61 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.status">
+    <signal name="TimerChange">
+      <arg type="s" name="Timer">
+      </arg>
+      <arg type="s" name="Change">
+      </arg>
+    </signal>
+    <signal name="ChannelSwitch">
+      <arg type="i" name="DeviceNumber">
+      </arg>
+      <arg type="i" name="ChannelNumber">
+      </arg>
+      <arg type="b" name="LiveView">
+      </arg>
+    </signal>
+    <signal name="Recording">
+      <arg type="i" name="DeviceNumber">
+      </arg>
+      <arg type="s" name="Name">
+      </arg>
+      <arg type="s" name="FileName">
+      </arg>
+      <arg type="b" name="On">
+      </arg>
+    </signal>
+    <signal name="Replaying">
+      <arg type="s" name="Name">
+      </arg>
+      <arg type="s" name="FileName">
+      </arg>
+      <arg type="b" name="On">
+      </arg>
+    </signal>
+    <signal name="SetVolume">
+      <arg type="i" name="Volume">
+      </arg>
+      <arg type="b" name="Absolute">
+      </arg>
+    </signal>
+    <signal name="SetAudioTrack">
+      <arg type="i" name="Index">
+      </arg>
+      <arg type="as" name="Tracks">
+      </arg>
+    </signal>
+    <signal name="SetAudioChannel">
+      <arg type="i" name="AudioChannel">
+      </arg>
+    </signal>
+    <signal name="SetSubtitleTrack">
+      <arg type="i" name="Index">
+      </arg>
+      <arg type="as" name="Tracks">
+      </arg>
+    </signal>
+  </interface>
+</node>

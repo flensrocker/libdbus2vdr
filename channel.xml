@@ -1,0 +1,29 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.channel">
+    <method name="Count">
+      <arg type="i" name="count" direction="out">
+      </arg>
+    </method>
+    <method name="GetFromTo">
+      <arg type="i" name="from_index" direction="in">
+      </arg>
+      <arg type="i" name="to_index" direction="in">
+      </arg>
+      <arg type="a(is)" name="channel" direction="out">
+      </arg>
+    </method>
+    <method name="List">
+      <arg type="s" name="option" direction="in">
+      </arg>
+      <arg type="a(is)" name="channel" direction="out">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>

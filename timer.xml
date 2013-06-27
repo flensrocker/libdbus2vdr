@@ -1,0 +1,41 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.timer">
+    <method name="New">
+      <arg type="s" name="timer" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="Delete">
+      <arg type="i" name="number" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="List">
+      <arg type="as" name="timer" direction="out">
+      </arg>
+    </method>
+    <method name="Next">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="i" name="number" direction="out">
+      </arg>
+      <arg type="i" name="seconds" direction="out">
+      </arg>
+      <arg type="t" name="start" direction="out">
+      </arg>
+      <arg type="t" name="stop" direction="out">
+      </arg>
+      <arg type="s" name="title" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>

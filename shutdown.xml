@@ -1,0 +1,29 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.shutdown">
+    <method name="ConfirmShutdown">
+      <arg type="b" name="ignoreuser" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+      <arg type="i" name="shexitcode" direction="out">
+      </arg>
+      <arg type="s" name="shparameter" direction="out">
+      </arg>
+    </method>
+    <method name="ManualStart">
+      <arg type="b" name="manual" direction="out">
+      </arg>
+    </method>
+    <method name="SetUserInactive">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>

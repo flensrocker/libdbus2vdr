@@ -1,0 +1,35 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.skin">
+    <method name="CurrentSkin">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="(iss)" name="skin" direction="out">
+      </arg>
+    </method>
+    <method name="ListSkins">
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="a(iss)" name="names" direction="out">
+      </arg>
+    </method>
+    <method name="SetSkin">
+      <arg type="s" name="name" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+    <method name="QueueMessage">
+      <arg type="s" name="messageText" direction="in">
+      </arg>
+      <arg type="i" name="replycode" direction="out">
+      </arg>
+      <arg type="s" name="replymessage" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>

@@ -1,0 +1,11 @@
+   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+                      "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!-- GDBus 2.32.3 -->
+<node>
+  <interface name="de.tvdr.vdr.pluginmanager">
+    <method name="List">
+      <arg type="a(ss)" name="pluginlist" direction="out">
+      </arg>
+    </method>
+  </interface>
+</node>
