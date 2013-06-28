@@ -1,9 +1,10 @@
 
-VERSION = 0.0.2b
+VERSION = 0.0.2c
 
 LIBFILE = libdbus2vdr.a
 
 CC ?= gcc
+AR ?= ar
 CFLAGS ?= -g -O3 -Wall
 
 DEFINES  = -D_GNU_SOURCE
@@ -36,7 +37,7 @@ $(DEPFILE): Makefile $(HEADERS)
 -include $(DEPFILE)
 
 $(LIBFILE): $(OBJS)
-	ar rcs $@ $(OBJS)
+	$(AR) rcs $@ $(OBJS)
 
 install-includes:
 	@mkdir -p $(DESTDIR)/usr/include/libdbus2vdr
