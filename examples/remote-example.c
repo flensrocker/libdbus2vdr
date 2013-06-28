@@ -23,7 +23,6 @@ gboolean  do_work(gpointer user_data)
   if (user_data == NULL)
      return FALSE;
 
-  WorkData *work_data = (WorkData*)user_data;
   dbus2vdr_remote_proxy_new_for_bus(G_BUS_TYPE_SYSTEM,
                                     G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START,
                                     "de.tvdr.vdr",

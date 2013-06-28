@@ -1,7 +1,7 @@
 
-VERSION = 0.0.2a
+VERSION = 0.0.2b
 
-SOFILE = libdbus2vdr.so
+LIBFILE = libdbus2vdr.a
 
 CC ?= gcc
 CFLAGS ?= -g -O3 -Wall
@@ -9,8 +9,7 @@ CFLAGS ?= -g -O3 -Wall
 DEFINES  = -D_GNU_SOURCE
 DEFINES += -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 
-CFLAGS   += -fPIC $(shell pkg-config --cflags glib-2.0 gio-unix-2.0)
-LDADD    += $(shell pkg-config --libs glib-2.0 gio-unix-2.0)
+CFLAGS   += $(shell pkg-config --cflags glib-2.0 gio-unix-2.0)
 
 XMLS = $(wildcard *.xml)
 HEADERS = $(patsubst %.xml,%.h,$(XMLS))
@@ -18,7 +17,7 @@ CODES = $(patsubst %.xml,%.c,$(XMLS))
 OBJS = $(patsubst %.xml,%.o,$(XMLS))
 
 
-all: $(SOFILE)
+all: $(LIBFILE)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $(DEFINES) -o $@ $<
@@ -36,21 +35,21 @@ $(DEPFILE): Makefile $(HEADERS)
 
 -include $(DEPFILE)
 
-$(SOFILE): $(OBJS)
-	$(CC) $(CFLAGS) $(LDFLAGS) -shared $(OBJS) $(LDADD) -o $@
+$(LIBFILE): $(OBJS)
+	ar rcs $@ $(OBJS)
 
 install-includes:
 	@mkdir -p $(DESTDIR)/usr/include/libdbus2vdr
 	@cp *.h $(DESTDIR)/usr/include/libdbus2vdr
 
-install-lib: $(SOFILE)
+install-lib: $(LIBFILE)
 	install -D $^ $(DESTDIR)/usr/lib/$^
 
 install: install-includes install-lib
 
 clean:
-	@-rm -f $(OBJS) $(DEPFILE) $(HEADERS) $(CODES) *.so *.tgz core* *~
+	@-rm -f $(OBJS) $(DEPFILE) $(HEADERS) $(CODES) $(LIBFILE) *.tgz core* *~
 
-orig:
+orig: clean
 	if [ -d .git ]; then git archive --format=tar.gz --prefix=libdbus2vdr-$(VERSION)/ -o ../libdbus2vdr_$(VERSION).orig.tar.gz master; fi
 
