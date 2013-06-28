@@ -9,18 +9,8 @@ Homepage: https://github.com/flensrocker/libdbus2vdr
 Package: libdbus2vdr
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libdbus2vdr-dev
 Description: A lib for communicating with the vdr plugin dbus2vdr
  This lib is a wrapper around some dbus calls using GIO
  for communicating with the vdr plugin dbus2vdr.
-
-Package: libdbus2vdr-dev
-Section: libdevel
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Development files for the libdbus2vdr
- This lib is a wrapper around some dbus calls using GIO
- for communicating with the vdr plugin dbus2vdr.
- .
- This package is needed to compile programs against libdbus2vdr,
- as only it includes the header files needed for compiling.
 

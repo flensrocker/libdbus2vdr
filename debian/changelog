@@ -1,3 +1,9 @@
+libdbus2vdr (0.0.2b-0yavdr0) precise; urgency=medium
+
+  * switch to static lib, makes more sense
+
+ -- Lars Hanisch <dvb@flensrocker.de>  Fri, 28 Jun 2013 11:21:00 +0200
+
 libdbus2vdr (0.0.2a-0yavdr0) precise; urgency=medium
 
   * add dev package and install examples
