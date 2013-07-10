@@ -35,6 +35,14 @@
       <arg type="b" name="On">
       </arg>
     </signal>
+    <method name="IsReplaying">
+      <arg type="s" name="Name" direction="out">
+      </arg>
+      <arg type="s" name="FileName" direction="out">
+      </arg>
+      <arg type="b" name="On" direction="out">
+      </arg>
+    </method>
     <signal name="SetVolume">
       <arg type="i" name="Volume">
       </arg>
